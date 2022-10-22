@@ -1,0 +1,32 @@
+$default-font-family: 'Montserrat', sans-serif;
+$base-font-size: 16px;
+$mv-colors: ( 
+    mv-white: #fff, 
+    mv-black: #000, 
+    mv-light-blue: #00aff0,
+    mv-transparent: transparent,
+    mv-dark-blue: #01011b,
+    mv-medium-blue: #00597b,
+    mv-light-purple: #a541e1,
+    mv-dark-purple: #320268,
+    mv-light-green: #45e9d0,
+    mv-dark-green: #015b51,
+    mv-black-50p: rgba( 0, 0, 0, .5 )
+);
+$header-sm-size: 70px;
+$header-lg-size: 100px;
+$screen-height: 100vh;
+$default-transition-time: .3s;
+$short-transition: all ( $default-transition-time / 3 )  linear;
+$default-transition: all $default-transition-time linear;
+$long-transition: all ( $default-transition-time * 1.66 ) ease-in;
+
+$default-border: 3px solid;
+
+$font-weights: ( normal: 400, semibold: 500, bold: 600 );
+
+$widths: ( full: 100%, half: 50% );
+
+$breakpoints: ( sm: 768px, md: 992px, lg: 1200px, xl: 1400px );
+
+

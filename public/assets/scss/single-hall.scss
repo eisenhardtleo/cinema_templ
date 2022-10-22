@@ -1,0 +1,155 @@
+@import 'commons';
+@import 'theme';
+@import 'utils';
+
+#hall-data-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+    /*background-color: lightseagreen;*/
+}
+
+.half-col {
+    position: relative;
+    width: 100%;
+}
+
+.hall-img {
+    text-align: center;
+    /*background-color: lightsalmon;*/
+}
+
+.hall-img img {
+    max-width: 100%;
+}
+
+.hall-data {
+    padding: 0 30px;
+    /*background-color: lightslategrey;*/
+}
+
+.hall-data-content {
+    position: relative;
+    width: 100%;
+}
+
+.hall-data-row {
+    position: relative;
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.hall-data-row:last-child {
+    margin-bottom: 0;
+}
+ 
+.hall-data-row h1,
+.hall-data-row h3,
+.hall-data-row p {
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.hall-data-row h1 {
+    display: inline-block;
+    font-size: 5rem;
+    color: #fff;
+    border-bottom: 2px solid #ba34f3;
+    padding-bottom: 3px;
+}
+
+.hall-data-row h3 {
+    font-size: 2rem;
+    color: #ba34f3;
+}
+
+.hall-data-row p {
+    font-size: 1.75rem;
+    color: #fff;
+}
+
+.hall-data-row p:last-child {
+    margin-bottom: 0;
+}
+
+
+.hall-carousel-container {
+    position: relative;
+    width: 100%;
+    padding: 0 50px;
+    margin-top: 75px;
+}
+
+.hall-carousel-navi {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    text-align: center;
+}
+
+#hall-carousel-navi-prev {
+    left: 0;
+}
+
+#hall-carousel-navi-next {
+    right: 0;
+}
+
+.hall-carousel-nav-btn {
+    color: #fff;
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+
+
+.item {
+    height: 150px;
+}
+
+
+
+
+/* BREAKPOINT */
+@media all and (min-width: 992px) {
+
+
+
+}
+
+@media all and (min-width: 1200px) {
+
+    #hall-data-container {
+        padding-top: 100px;
+    }
+
+    #hall-data-container-inner {
+        position: relative;
+        display: table;
+        width: 100%;
+    }
+
+    .hall-data-content {
+        width: 50%;
+    }
+
+    .half-col {
+        position: relative;
+        width: 50%;
+        display: table-cell;
+    }
+
+    .hall-img {
+        vertical-align: middle;
+        text-align: right;
+    }
+    
+    .hall-data {
+        text-align: left;
+        vertical-align: top;
+    }
+
+}

@@ -1,0 +1,19 @@
+@import 'variables';
+
+@mixin default-size() {
+    position: relative;
+    width: map-get( $widths, full );
+}
+
+@mixin mq-min-width( $width ) {
+    @media all and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin default-image() {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+

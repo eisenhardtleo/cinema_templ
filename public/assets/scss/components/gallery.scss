@@ -1,0 +1,131 @@
+@import '../variables';
+@import '../mixins';
+
+/* Gallery */
+
+#hero-gallery {
+    @include default-size;
+    height: 500px;
+
+    #hero-gallery-inner {
+        @include default-size;
+        height: 100%;
+        padding-bottom: 30px;
+        #slideshow-container {
+            @include default-size;
+            height: 100%;
+            overflow: hidden;
+            #slideshow {
+                position: relative;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                transition: $default-transition;
+                left: 0;
+                .slide {
+                    @include default-image;
+                    position: relative;
+                    display: inline-block;
+                    height: 100%;
+                    margin: 0 -2px;
+
+                    &.active {
+                        .slide-content {
+                            .slide-title {
+                                opacity: 1;
+                                visibility: visible;
+                                transition: $short-transition;
+                                transform: translateY(0);
+                            }  
+                        }
+                    }
+                    .slide-content {
+                        position: relative;
+                        width: 50%;
+                        height: 100%;
+                        margin: auto;
+                        .slide-title {
+                            color: map-get( $mv-colors, mv-white );
+                            font-size: 6rem;
+                            text-align: center;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: $long-transition;
+                            transform: translateY(10px);
+                        }
+                        
+                    }
+                }
+            }
+            
+            #hero-gallery-navi-prev {
+                left: 50px;
+                @include mq-min-width( map-get( $breakpoints, md ) ) {
+                    left: 100px;
+                }
+            }
+
+            #hero-gallery-navi-next {
+                right: 50px;
+                @include mq-min-width( map-get( $breakpoints, md ) ) {
+                    right: 100px;
+                }
+            }
+
+            .hero-gallery-navi {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                height: 100%;
+                width: 100px;
+                z-index: 3;
+
+                .hero-gallery-navi-btn {
+                    font-size: 3rem;
+                    line-height: 1;
+                    color: map-get( $mv-colors, mv-white );
+                    cursor: pointer;
+                    text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.6);
+                    transition: $default-transition;
+                    &:hover {
+                        color: map-get( $mv-colors, mv-light-blue );
+                    }
+                }
+            }
+        }
+
+        #hero-gallery-dots {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 30px;
+            right: 0;
+            width: 100%;
+            background-color: map-get( $mv-colors, mv-dark-blue );
+            text-align: center;
+            padding: 5px 15px;
+            z-index: 3;
+            .dot {
+                position: relative;
+                display: inline-block;
+                height: 10px;
+                width: 10px;
+                background-color: map-get( $mv-colors, mv-light-blue );
+                transition: $default-transition;
+                cursor: pointer;
+                border-radius: 50%;
+                &.active {
+                    background-color: map-get( $mv-colors, mv-white );
+                    transform: scale( 1.2 );
+                    transform-origin: center center;
+                }
+                &:hover {
+                    background-color: map-get( $mv-colors, mv-white );
+                    transform: scale( 1.2 );
+                    transform-origin: center center;
+                }
+            }
+        }
+    }
+}
+/* End Gallery */

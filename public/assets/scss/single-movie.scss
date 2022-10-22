@@ -1,0 +1,182 @@
+@import 'commons';
+@import 'theme';
+@import 'utils';
+
+
+/* MOVIES WALL */
+#movies {
+    position: relative;
+    width: 100%;
+}
+
+.single-movie-block {
+    position: relative;
+    margin-top: 35px;
+}
+
+.single-movie-poster {
+    position: relative;
+    width: 100%;
+    padding-top: 150%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.single-movie-block h4 {
+    color: #fff !important;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+/* END MOVIES WALL */
+
+/* SINGLE MOVIE PAGE */
+#movie-data-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#movie-data-container #video-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#video-container #video-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: 2;
+}
+
+#video-container #video-play {
+    position: absolute;
+    display: block;
+    top: 50px;
+    left: 50px;
+    z-index: 4;
+    cursor: pointer;
+}
+
+#video-container #video-play .video-play-element {
+    position: relative;
+    display: inline-block;
+}
+
+#video-container #video-play #play-icon {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+
+}
+
+#video-container #video-play #play-label-container {
+    height: 100px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #00adef;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-left: 15px;
+    line-height: 1;
+
+}
+
+#video-container video {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+
+#movie-data {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.movie-info {
+    margin-top:35px;
+}
+
+#movie-data h4 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #00adef;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+
+}
+
+
+#movie-data h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+#movie-data h5 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.25;
+
+}
+/*END SINGLE MOVIE PAGE */
+
+/* BRAKPOINT */
+@media all and (min-width: 992px) {
+
+
+
+}
+
+@media all and (min-width: 1200px) {
+
+    #movie-data-container {
+        height: calc( 100vh - 100px );
+    }
+
+    #movie-data {
+        position: absolute;
+    }
+    
+    .single-movie-block {
+        margin-top: 0;
+    }
+
+    .movie-info {
+        margin-top: 0;
+    }
+    
+
+}
+
+@media all and (min-width: 1440px) {
+      
+}

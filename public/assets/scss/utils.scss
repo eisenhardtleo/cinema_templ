@@ -1,0 +1,43 @@
+.dt {
+    position: relative;
+    display: table;
+}
+
+.dtc {
+    display: table-cell;
+}
+
+.va-m {
+    vertical-align: middle;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.padded-section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.padded-section:first-child {
+    padding-top: 150px;
+}
+@media all and (min-width: 992px) {
+    .eq-col-row {
+        display: table;
+        width: 100%;
+    }
+
+
+    .eq-col-row [class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+

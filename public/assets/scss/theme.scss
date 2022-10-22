@@ -1,0 +1,151 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap');
+/*
+    Colors
+*/
+
+.c-white {
+    color: map-get( $mv-colors, mv-white );
+}
+
+.c-light-blue {
+    color: map-get( $mv-colors, mv-light-blue );
+}
+
+.c-black {
+    color: map-get( $mv-colors, mv-black );
+}
+
+/*
+    Backgrounds
+*/
+.bg-transparent {
+    background-color: map-get( $mv-colors, mv-transparent );
+}
+
+.bg-light-blue {
+    background-color: map-get( $mv-colors, mv-light-blue );
+}
+
+.bg-dark-blue {
+    background-color: map-get( $mv-colors, mv-dark-blue );
+}
+
+.bg-light-purple {
+    background-color:map-get( $mv-colors, mv-light-purple );
+}
+
+.bg-dark-purple {
+    background-color: map-get( $mv-colors, mv-dark-purple );
+}
+
+.bg-light-green {
+    background-color: map-get( $mv-colors, mv-light-green );
+}
+
+.bg-dark-green {
+    background-color: map-get( $mv-colors, mv-dark-green );
+}
+
+.bg-white {
+    background-color: map-get( $mv-colors, mv-white );
+}
+
+.bg-black {
+    background-color: map-get( $mv-colors, mv-black );
+}
+
+.section-title {
+    font-size: 2rem;
+    padding-bottom: 3px;
+    border-bottom: 3px solid map-get( $mv-colors, mv-light-blue );
+    color: map-get( $mv-colors, mv-white );
+    letter-spacing: 5px;
+    margin-top: 0;
+    margin-bottom: 75px;
+    display: inline-block;
+}
+
+.section-title-opaque-container{
+    position: relative;
+    display: inline-block;
+    background-color: map-get( $mv-colors, mv-black-50p );
+    padding: 35px 25px 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+     .section-title {
+        margin-bottom: 0;
+     }
+}
+
+.btn-mv {
+    padding: 14px 20px;
+    height: 45px;
+    border-radius: 5px;
+    color: map-get( $mv-colors, mv-white );
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 3px;
+    border: 0;
+
+    &:hover {
+        color: map-get( $mv-colors, mv-white );
+        text-decoration: none;
+    }
+
+    &.btn-mv-lg {
+        padding: 14px 40px;
+        color: map-get( $mv-colors, mv-white );
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &.btn-mv-blue {
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#03b0f5+0,00597b+100 */
+        background: map-get( $mv-colors, mv-light-blue ); /* Old browsers */
+        background: -moz-linear-gradient(top,  map-get( $mv-colors, mv-light-blue ) 0%, map-get( $mv-colors, mv-medium-blue ) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  map-get( $mv-colors, mv-light-blue ) 0%,map-get( $mv-colors, mv-medium-blue ) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  map-get( $mv-colors, mv-light-blue ) 0%,map-get( $mv-colors, mv-medium-blue ) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aff0', endColorstr='#00597b',GradientType=0 ); /* IE6-9 */
+        transition: all .3s ease;
+        &:hover,
+        &:focus,
+        &.focus {
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00597b+0,03b0f5+100 */
+            background: map-get( $mv-colors, mv-medium-blue ); /* Old browsers */
+            background: -moz-linear-gradient(top,  map-get( $mv-colors, mv-medium-blue ) 0%, map-get( $mv-colors, mv-light-blue ) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  map-get( $mv-colors, mv-medium-blue ) 0%,map-get( $mv-colors, mv-light-blue ) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  map-get( $mv-colors, mv-medium-blue ) 0%,map-get( $mv-colors, mv-light-blue ) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00597b', endColorstr='#03b0f5',GradientType=0 ); /* IE6-9 */
+        }
+
+   }
+
+   &.btn-mv-purple {
+       /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#03b0f5+0,00597b+100 */
+       background: map-get( $mv-colors, mv-light-purple ); /* Old browsers */
+       background: -moz-linear-gradient(top,  map-get( $mv-colors, mv-light-purple ) 0%, map-get( $mv-colors, mv-dark-purple ) 100%); /* FF3.6-15 */
+       background: -webkit-linear-gradient(top,  map-get( $mv-colors, mv-light-purple ) 0%,map-get( $mv-colors, mv-dark-purple ) 100%); /* Chrome10-25,Safari5.1-6 */
+       background: linear-gradient(to bottom,  map-get( $mv-colors, mv-light-purple ) 0%,map-get( $mv-colors, mv-dark-purple ) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ba34f3', endColorstr='#39016e',GradientType=0 ); /* IE6-9 */
+       transition: all .3s ease;
+        &:hover,
+        &:focus,
+        &.focus {
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00597b+0,03b0f5+100 */
+            background: map-get( $mv-colors, mv-dark-purple ); /* Old browsers */
+            background: -moz-linear-gradient(top,  map-get( $mv-colors, mv-dark-purple ) 0%, map-get( $mv-colors, mv-light-purple ) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  map-get( $mv-colors, mv-dark-purple ) 0%,map-get( $mv-colors, mv-light-purple ) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  map-get( $mv-colors, mv-dark-purple ) 0%,map-get( $mv-colors, mv-light-purple ) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39016e', endColorstr='#ba34f3',GradientType=0 ); /* IE6-9 */
+        }
+   }
+}
+
+
+
+
+
+
+
+

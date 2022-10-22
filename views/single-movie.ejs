@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Single movie</title>
+    <%- include("includes/head") %>
+
+<body>
+    <%- include("includes/header") %>
+        <main id="main">
+            <section id="movie-data-container">
+                <div id="video-container">
+                    <div id="video-overlay" class="hidden-xs hidden-sm hidden-md"></div>
+                    <video id="video" class="hidden-xs hidden-sm hidden-md" controls muted loop autoplay>
+                        <source src="assets/videos/<%= singleMovie.id %>.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div id="movie-data">
+                        <div class="container-fluid h-full">
+                            <div class="row h-full">
+                                <div class="col-xs-12 col-xs-offset-0 col-lg-6 col-lg-offset-6 h-full">
+                                    <div class="dt w-full h-full">
+                                        <div class="dtc va-m">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-lg-4">
+                                                    <div class="row">
+                                                        <article class="single-movie-block col-xs-12">
+                                                            <h1 class="hidden-lg">
+                                                                <%= singleMovie.name %>
+                                                            </h1>
+                                                            <div class="single-movie-poster"
+                                                                style="background-image: url('<%= singleMovie.pathImage %>');">
+                                                            </div>
+                                                            <div class="single-movie-data text-center">
+                                                                <h4 class="hidden-xs hidden-sm hidden-md">
+                                                                    <%= singleMovie.name %>
+                                                                </h4>
+                                                                <div class="hall-data-row">
+                                                                    <button class="btn btn-mv-blue btn-mv single-movie-info-cta" type="button" data-toggle="modal" data-target="#myModal">
+                                                                        Prenota
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-lg-8 movie-info">
+                                                    <section>
+                                                        <h4>Titolo:</h4>
+                                                        <h3>
+                                                            <%= singleMovie.name %><br />
+                                                        </h3>
+                                                        <p>
+                                                            <%= singleMovie.info %>
+                                                        </p>
+                                                    </section>
+                                                    <section>
+                                                        <h4>data di uscita:</h4>
+                                                        <h5>
+                                                            <%= singleMovie.date %>
+                                                                </53>
+                                                    </section>
+                                                    <section>
+                                                        <h4>durata:</h4>
+                                                        <h5>
+                                                            <%= singleMovie.duration %>
+                                                        </h5>
+                                                    </section>
+                                                    <section>
+                                                        <h4>regia:</h4>
+                                                        <h5>
+                                                            <%= singleMovie.director %>
+                                                        </h5>
+                                                    </section>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h3 class="modal-title" id="myModalLabel" style="color: #000; text-shadow:none">Hai scelto il film "<%= singleMovie.name %>". <br> Quanti posti vuoi prenotare?</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Numero posti</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Orario</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>18.00</option>
+                                    <option>20.30</option>
+                                    <option>22.30</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleFormControlInput1">Indirizzo email</label>
+                              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Inserisci qui il tuo indirizzo email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Preferenze per la prenotazione</label>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                          </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
+                        <button type="button" class="btn btn-primary">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <%- include("includes/footer") %>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="assets/js/vendors/bootstrap3/bootstrap.min.js"></script>
+            <script src="assets/js/single-movie.js"></script>
+</body>
+
+</html>
